@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مرويات موطأ الإمام مالك</title>
+  <meta name="description" content="موقع علمي متخصص في مرويات موطأ الإمام مالك بن أنس - وحدة علوم الحديث النبوي والحوسبة" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet" />
+  <style>
+/* =============================================
+   MUWATTA WEBSITE — ISLAMIC DIGITAL DESIGN
+   ============================================= */
+
+:root {
+  --gold: #C9972A;
+  --gold-light: #E8C56A;
+  --gold-pale: #FDF5E0;
+  --green-deep: #1A3A2A;
+  --green-mid: #2D6A4F;
+  --green-light: #52A877;
+  --green-pale: #E8F4EE;
+  --brown: #5C2D0A;
+  --cream: #FDFAF4;
+  --white: #FFFFFF;
+  --text-dark: #1A1A1A;
+  --text-mid: #3D3D3D;
+  --text-light: #6B6B6B;
+  --shadow-sm: 0 2px 12px rgba(0,0,0,.08);
+  --shadow-md: 0 8px 32px rgba(0,0,0,.12);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,.16);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --transition: .3s ease;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  direction: rtl;
+  overflow-x: hidden;
+  line-height: 1.8;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: rgba(26, 58, 42, 0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,151,42,.25);
+  transition: var(--transition);
+}
+
+.nav-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 66px;
+}
+
+.nav-brand {
+  font-family: 'Amiri', serif;
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.nav-ornament {
+  font-size: 1.3rem;
+  color: var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  align-items: center;
+}
+
+.nav-link {
+  color: rgba(255,255,255,.82);
+  text-decoration: none;
+  font-size: .88rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: var(--transition);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nav-link:hover, .nav-link.active {
+  background: rgba(201,151,42,.2);
+  color: var(--gold-light);
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.nav-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold-light);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+
+/* ===== PAGES ===== */
+.page { display: none; min-height: 100vh; padding-top: 66px; }
+.page.active { display: block; animation: fadeInPage .4s ease; }
+
+@keyframes fadeInPage {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HERO ===== */
+.hero {
+  position: relative;
+  min-height: calc(100vh - 66px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, #0E2318 0%, #1A3A2A 45%, #0D2010 100%);
+}
+
+.geo-pattern {
+  position: absolute;
+  inset: 0;
+  opacity: .08;
+  background-image:
+    repeating-linear-gradient(45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 28px),
+    repeating-linear-gradient(-45deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 28px);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(201,151,42,.12) 0%, transparent 70%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 820px;
+  padding: 60px 24px;
+  animation: heroReveal 1s ease forwards;
+}
+
+@keyframes heroReveal {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.hero-badge {
+  display: inline-block;
+  padding: 6px 20px;
+  background: rgba(201,151,42,.2);
+  border: 1px solid rgba(201,151,42,.4);
+  border-radius: 20px;
+  color: var(--gold-light);
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin-bottom: 24px;
+}
+
+.bismillah {
+  display: block;
+  font-family: 'Amiri', serif;
+  font-size: 1.6rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+  opacity: .9;
+}
+
+.hero-title {
+  font-family: 'Amiri', serif;
+  font-size: clamp(2.6rem, 7vw, 4.4rem);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 20px rgba(0,0,0,.4);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255,255,255,.7);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.hero-quote {
+  background: rgba(201,151,42,.1);
+  border: 1px solid rgba(201,151,42,.3);
+  border-radius: var(--radius);
+  padding: 20px 28px;
+  margin-bottom: 36px;
+  font-family: 'Amiri', serif;
+  font-size: 1.15rem;
+  color: rgba(255,255,255,.9);
+  position: relative;
+}
+
+.quote-mark {
+  font-size: 2.5rem;
+  line-height: 0;
+  vertical-align: middle;
+  color: var(--gold);
+  margin-left: 6px;
+}
+
+.quote-author {
+  display: block;
+  font-size: .85rem;
+  color: var(--gold-light);
+  margin-top: 8px;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  padding: 13px 32px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--green-deep);
+  border: none;
+  border-radius: 30px;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+  transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(201,151,42,.4);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,151,42,.5);
+}
+
+.btn-outline {
+  padding: 13px 32px;
+  background: transparent;
+  color: var(--gold-light);
+  border: 1.5px solid rgba(201,151,42,.5);
+  border-radius: 30px;
+  font-size: .95rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: 'Cairo', sans-serif;
+  transition: var(--transition);
+}
+
+.btn-outline:hover {
+  background: rgba(201,151,42,.15);
+  border-color: var(--gold-light);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255,255,255,.4);
+  font-size: 1.4rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ===== CARDS SECTION ===== */
+.cards-section {
+  padding: 80px 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-ornament {
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-family: 'Amiri', serif;
+  font-size: 2.2rem;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+
+.section-header p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  border: 1px solid rgba(0,0,0,.07);
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--green-mid);
+  transition: var(--transition);
+}
+
+.card.featured::before { background: linear-gradient(to bottom, var(--gold), var(--gold-light)); }
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card:hover::before { width: 6px; }
+
+.card-icon { font-size: 2.2rem; margin-bottom: 14px; }
+
+.card h3 {
+  font-family: 'Amiri', serif;
+  font-size: 1.25rem;
+  color: var(--green-deep);
+  margin-bottom: 10px;
+}
+
+.card p { color: var(--text-mid); font-size: .9rem; line-height: 1.7; }
+
+.card-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 24px;
+  font-size: 1.2rem;
+  color: var(--gold);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.card:hover .card-arrow { opacity: 1; transform: translateX(-4px); }
+
+/* ===== STATS ===== */
+.stats-section {
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  padding: 60px 24px;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+
+.stat-num {
+  display: block;
+  font-family: 'Cairo', sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-label {
+  color: rgba(255,255,255,.75);
+  font-size: .9rem;
+  font-weight: 400;
+}
+
+/* ===== PAGE HERO ===== */
+.page-hero {
+  padding: 70px 24px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio-hero       { background: linear-gradient(135deg, #1A3A2A, #2D6A4F); }
+.students-hero  { background: linear-gradient(135deg, #1A2A3A, #2D4A6A); }
+.narrations-hero{ background: linear-gradient(135deg, #3A1A2A, #6A2D4A); }
+.scholars-hero  { background: linear-gradient(135deg, #3A3A1A, #6A6A2D); }
+.about-hero     { background: linear-gradient(135deg, var(--green-deep), #2D6A4F); }
+
+.page-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 1px, transparent 1px, transparent 22px),
+                    repeating-linear-gradient(-45deg, rgba(255,255,255,.03) 0px, rgba(255,255,255,.03) 1px, transparent 1px, transparent 22px);
+}
+
+.page-hero-content { position: relative; z-index: 1; }
+
+.page-badge {
+  display: inline-block;
+  padding: 5px 18px;
+  background: rgba(201,151,42,.25);
+  border: 1px solid rgba(201,151,42,.4);
+  border-radius: 20px;
+  color: var(--gold-light);
+  font-size: .8rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.page-hero h1 {
+  font-family: 'Amiri', serif;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.page-hero p {
+  color: rgba(255,255,255,.75);
+  font-size: 1.05rem;
+}
+
+/* ===== CONTENT WRAPPER ===== */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.content-body { flex: 1; }
+.content-body.full-width { width: 100%; }
+
+/* ===== TOC ===== */
+.toc {
+  width: 240px;
+  flex-shrink: 0;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  border: 1px solid rgba(0,0,0,.08);
+  position: sticky;
+  top: 88px;
+  box-shadow: var(--shadow-sm);
+}
+
+.toc h4 {
+  font-family: 'Amiri', serif;
+  font-size: 1.05rem;
+  color: var(--green-deep);
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold);
+}
+
+.toc ul { list-style: none; }
+
+.toc ul li a {
+  display: block;
+  padding: 7px 10px;
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: .88rem;
+  border-radius: 6px;
+  transition: var(--transition);
+  border-right: 3px solid transparent;
+}
+
+.toc ul li a:hover {
+  background: var(--green-pale);
+  border-right-color: var(--green-mid);
+  color: var(--green-deep);
+}
+
+/* ===== CONTENT SECTIONS ===== */
+.content-section {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 36px 32px;
+  margin-bottom: 28px;
+  border: 1px solid rgba(0,0,0,.07);
+  box-shadow: var(--shadow-sm);
+}
+
+.content-section h2 {
+  font-family: 'Amiri', serif;
+  font-size: 1.65rem;
+  color: var(--green-deep);
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--gold-pale);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-section p {
+  color: var(--text-mid);
+  font-size: .97rem;
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+/* ===== HIGHLIGHT BOX ===== */
+.highlight-box {
+  background: var(--green-pale);
+  border-right: 4px solid var(--green-mid);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  margin: 20px 0;
+  font-size: .95rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+}
+
+.highlight-box.gold {
+  background: var(--gold-pale);
+  border-right-color: var(--gold);
+}
+
+/* ===== STORY BLOCK ===== */
+.story-block {
+  display: flex;
+  gap: 16px;
+  background: #f8f4ec;
+  border-radius: var(--radius-sm);
+  padding: 20px;
+  margin: 20px 0;
+  align-items: flex-start;
+}
+
+.story-icon { font-size: 1.6rem; flex-shrink: 0; }
+.story-content p { margin: 0; font-size: .95rem; }
+
+/* ===== TEACHERS GRID ===== */
+.teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.teacher-card {
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,.09);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.teacher-num {
+  background: var(--green-mid);
+  color: var(--white);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .75rem;
+  flex-shrink: 0;
+}
+
+/* ===== QUOTE BOX ===== */
+.quote-box {
+  border-right: 4px solid var(--gold);
+  padding: 16px 20px;
+  margin: 20px 0;
+  background: var(--gold-pale);
+  border-radius: var(--radius-sm);
+  font-family: 'Amiri', serif;
+  font-size: 1.05rem;
+  color: var(--brown);
+}
+
+/* ===== PRINCIPLES GRID ===== */
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.principle {
+  background: var(--green-deep);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  text-align: center;
+  color: var(--white);
+}
+
+.principle-num {
+  font-size: 1.6rem;
+  color: var(--gold);
+  font-family: 'Amiri', serif;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.principle-text { font-size: .88rem; font-weight: 600; }
+
+/* ===== HADITH STATS ===== */
+.hadith-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.hadith-stat {
+  flex: 1;
+  min-width: 130px;
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  text-align: center;
+}
+
+.hadith-num {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--green-mid);
+  display: block;
+}
+
+.hadith-source { font-size: .8rem; color: var(--text-light); margin-top: 6px; }
+
+/* ===== SECTIONS LIST ===== */
+.sections-list { margin: 20px 0; }
+.sections-list h4 { margin-bottom: 12px; color: var(--green-deep); font-size: .95rem; }
+.section-items { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.section-item {
+  padding: 6px 14px;
+  background: var(--green-pale);
+  border: 1px solid rgba(45,106,79,.2);
+  border-radius: 20px;
+  font-size: .84rem;
+  color: var(--green-deep);
+  font-weight: 600;
+}
+
+/* ===== SCHOLARS OPINIONS ===== */
+.scholars-opinions { display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
+
+.opinion {
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  border-right: 3px solid var(--gold);
+}
+
+.opinion-author {
+  font-weight: 700;
+  color: var(--green-deep);
+  font-size: .9rem;
+  margin-bottom: 8px;
+}
+
+.opinion-text {
+  font-family: 'Amiri', serif;
+  font-size: 1.05rem;
+  color: var(--brown);
+}
+
+/* ===== STUDENTS TABS ===== */
+.countries-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.tab-btn {
+  padding: 9px 20px;
+  background: var(--white);
+  border: 1.5px solid rgba(0,0,0,.1);
+  border-radius: 25px;
+  font-family: 'Cairo', sans-serif;
+  font-size: .88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  color: var(--text-mid);
+}
+
+.tab-btn.active, .tab-btn:hover {
+  background: var(--green-deep);
+  color: var(--gold-light);
+  border-color: var(--green-deep);
+}
+
+.tab-content { display: none; animation: fadeInPage .3s ease; }
+.tab-content.active { display: block; }
+
+.students-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.student-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 24px 20px;
+  border: 1px solid rgba(0,0,0,.08);
+  position: relative;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.student-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.student-card.featured { border-color: var(--gold); background: var(--gold-pale); }
+
+.student-rank { font-size: 1.4rem; margin-bottom: 10px; }
+
+.student-card h4 {
+  font-family: 'Amiri', serif;
+  font-size: 1.1rem;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+
+.student-card p { font-size: .86rem; color: var(--text-light); }
+
+/* ===== NARRATION PAGE ===== */
+.narr-badge {
+  display: inline-block;
+  padding: 3px 12px;
+  border-radius: 12px;
+  font-size: .75rem;
+  font-weight: 700;
+  margin-left: 8px;
+  vertical-align: middle;
+  font-family: 'Cairo', sans-serif;
+}
+
+.narr-badge.popular { background: #E8F4EE; color: var(--green-mid); }
+.narr-badge.accurate { background: var(--gold-pale); color: var(--brown); }
+
+.narr-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.narr-detail {
+  padding: 7px 14px;
+  background: var(--cream);
+  border-radius: 20px;
+  font-size: .85rem;
+  color: var(--text-mid);
+}
+
+.narr-label { font-weight: 700; color: var(--green-deep); margin-left: 4px; }
+
+.diff-boxes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.diff-box {
+  flex: 1;
+  min-width: 160px;
+  padding: 14px 18px;
+  background: var(--white);
+  border: 1.5px solid rgba(45,106,79,.25);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--green-deep);
+}
+
+.other-narrations {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.other-narr {
+  background: var(--cream);
+  border-radius: var(--radius-sm);
+  padding: 18px;
+  border: 1px solid rgba(0,0,0,.08);
+}
+
+.other-narr h4 {
+  font-family: 'Amiri', serif;
+  font-size: 1rem;
+  color: var(--green-deep);
+  margin-bottom: 8px;
+}
+
+.other-narr p { font-size: .85rem; color: var(--text-light); }
+
+.geo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.geo-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 22px 18px;
+  border: 1px solid rgba(0,0,0,.08);
+  text-align: center;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.geo-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+
+.geo-flag { font-size: 2rem; margin-bottom: 10px; }
+.geo-card h4 { font-family: 'Amiri', serif; font-size: 1rem; color: var(--green-deep); margin-bottom: 8px; }
+.geo-card p { font-size: .83rem; color: var(--text-light); line-height: 1.6; }
+
+/* ===== SCHOLARS PAGE ===== */
+.scholars-search-bar {
+  margin-bottom: 24px;
+}
+
+.scholars-search-bar input {
+  width: 100%;
+  padding: 14px 20px;
+  font-family: 'Cairo', sans-serif;
+  font-size: .95rem;
+  border: 1.5px solid rgba(0,0,0,.12);
+  border-radius: 30px;
+  background: var(--white);
+  direction: rtl;
+  outline: none;
+  transition: var(--transition);
+}
+
+.scholars-search-bar input:focus {
+  border-color: var(--green-mid);
+  box-shadow: 0 0 0 3px rgba(45,106,79,.12);
+}
+
+.scholars-counter {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin-bottom: 20px;
+}
+
+.scholars-counter span {
+  font-size: 1.6rem;
+  color: var(--gold);
+  font-family: 'Cairo', sans-serif;
+}
+
+.scholars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scholar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--white);
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  border: 1px solid rgba(0,0,0,.07);
+  transition: var(--transition);
+}
+
+.scholar-item:hover { box-shadow: var(--shadow-sm); transform: translateX(-3px); }
+
+.scholar-num {
+  background: var(--green-deep);
+  color: var(--gold-light);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: .78rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.scholar-info { font-size: .88rem; line-height: 1.7; }
+.scholar-info strong { color: var(--green-deep); }
+.scholar-info em { color: var(--text-light); font-style: normal; }
+
+.scholars-note {
+  background: var(--gold-pale);
+  border: 1px solid rgba(201,151,42,.3);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-top: 30px;
+  text-align: center;
+  font-size: .97rem;
+  color: var(--text-dark);
+}
+
+/* ===== ABOUT PAGE ===== */
+.about-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 40px;
+  text-align: center;
+  border: 1px solid rgba(0,0,0,.07);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 28px;
+}
+
+.about-logo {
+  font-size: 3.5rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.about-card h2 {
+  font-family: 'Amiri', serif;
+  font-size: 1.8rem;
+  color: var(--green-deep);
+  margin-bottom: 30px;
+}
+
+.about-details { max-width: 600px; margin: 0 auto; }
+
+.about-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+}
+
+.about-row:last-child { border-bottom: none; }
+.about-label { font-weight: 700; color: var(--green-deep); font-size: .93rem; }
+.about-value { color: var(--text-mid); font-size: .93rem; }
+
+.about-mission, .about-sources {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 30px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(0,0,0,.07);
+}
+
+.about-mission h3, .about-sources h3 {
+  font-family: 'Amiri', serif;
+  font-size: 1.4rem;
+  color: var(--green-deep);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold-pale);
+}
+
+.about-mission p { margin-bottom: 14px; font-size: .95rem; color: var(--text-mid); }
+
+.about-sources ul {
+  padding-right: 20px;
+  color: var(--text-mid);
+  font-size: .93rem;
+  line-height: 2;
+}
+
+/* ===== LEAD TEXT ===== */
+.lead {
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  margin-bottom: 28px;
+  background: var(--green-pale);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  border-right: 3px solid var(--green-mid);
+}
+
+/* ===== SEARCH ===== */
+.search-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.85);
+  z-index: 2000;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 120px;
+}
+
+.search-overlay.open { display: flex; }
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  width: min(90%, 600px);
+}
+
+.search-box input {
+  flex: 1;
+  padding: 16px 22px;
+  font-family: 'Cairo', sans-serif;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  direction: rtl;
+  outline: none;
+}
+
+.search-box button {
+  padding: 14px 18px;
+  background: rgba(255,255,255,.15);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.search-results {
+  width: min(90%, 600px);
+  margin-top: 20px;
+  max-height: 50vh;
+  overflow-y: auto;
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.search-result-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0,0,0,.07);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.search-result-item:hover { background: var(--green-pale); }
+.search-result-item h4 { color: var(--green-deep); font-size: .93rem; margin-bottom: 4px; }
+.search-result-item p { color: var(--text-light); font-size: .82rem; }
+
+/* ===== FLOATING BUTTONS ===== */
+.search-btn, .back-top, .share-btn {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-md);
+  z-index: 900;
+}
+
+.search-btn {
+  bottom: 100px;
+  left: 22px;
+  background: var(--green-deep);
+  color: var(--gold-light);
+}
+
+.back-top {
+  bottom: 50px;
+  left: 22px;
+  background: var(--gold);
+  color: var(--white);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.back-top.visible { opacity: 1; pointer-events: all; }
+
+.share-btn {
+  bottom: 150px;
+  left: 22px;
+  background: var(--green-mid);
+  color: var(--white);
+}
+
+.search-btn:hover, .back-top:hover, .share-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== SHARE MODAL ===== */
+.share-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.share-modal.open { display: flex; }
+
+.share-content {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 32px;
+  width: min(90%, 380px);
+  text-align: center;
+}
+
+.share-content h3 {
+  font-family: 'Amiri', serif;
+  font-size: 1.4rem;
+  color: var(--green-deep);
+  margin-bottom: 20px;
+}
+
+.share-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.share-btns button, .share-close {
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1.5px solid rgba(0,0,0,.12);
+  background: var(--cream);
+  font-family: 'Cairo', sans-serif;
+  font-size: .88rem;
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.share-btns button:hover { background: var(--green-pale); }
+.share-close { background: var(--green-deep); color: var(--white); border-color: var(--green-deep); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .content-wrapper { flex-direction: column; padding: 24px 16px 60px; }
+  .toc { width: 100%; position: static; }
+  .principles-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media (max-width: 700px) {
+  .nav-links {
+    position: fixed;
+    top: 66px; right: -100%;
+    width: 80%;
+    height: calc(100vh - 66px);
+    background: var(--green-deep);
+    flex-direction: column;
+    padding: 30px 20px;
+    gap: 6px;
+    transition: .35s ease;
+    overflow-y: auto;
+  }
+  .nav-links.open { right: 0; }
+  .nav-toggle { display: flex; }
+  .nav-link { font-size: .95rem; padding: 12px 16px; }
+
+  .stats-section { gap: 30px; padding: 40px 16px; }
+  .principles-grid { grid-template-columns: repeat(2,1fr); }
+  .hadith-stats { gap: 8px; }
+  .hero-title { font-size: 2.2rem; }
+  .about-row { flex-direction: column; align-items: flex-start; gap: 2px; }
+}
+
+@media (max-width: 480px) {
+  .cards-grid { grid-template-columns: 1fr; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .countries-tabs { gap: 6px; }
+  .tab-btn { font-size: .8rem; padding: 7px 14px; }
+  .content-section { padding: 24px 18px; }
+}
+
+
+/* ===== SOURCES LIST WITH LINKS ===== */
+.sources-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sources-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: var(--cream);
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: var(--radius-sm);
+  padding: 14px 18px;
+  transition: var(--transition);
+}
+
+.sources-list li:hover {
+  border-color: rgba(45,106,79,.25);
+  box-shadow: var(--shadow-sm);
+  background: var(--white);
+}
+
+.source-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1;
+}
+
+.source-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.source-title {
+  font-size: .9rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  background: var(--green-deep);
+  color: var(--gold-light);
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition: var(--transition);
+  font-family: 'Cairo', sans-serif;
+}
+
+.source-link:hover {
+  background: var(--green-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(26,58,42,.3);
+}
+
+.source-link-gov {
+  background: linear-gradient(135deg, #7B3F00, #C07020);
+  color: var(--white);
+}
+
+.source-link-gov:hover {
+  background: linear-gradient(135deg, #8B5010, #D08030);
+}
+
+.link-arrow {
+  font-size: .9rem;
+  transition: transform .2s ease;
+}
+
+.source-link:hover .link-arrow {
+  transform: translate(2px, -2px);
+}
+
+@media (max-width: 600px) {
+  .sources-list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .source-link { align-self: flex-start; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <div class="nav-brand">
+      <span class="nav-ornament">☽</span>
+      <span>موطأ الإمام مالك</span>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="nav-link active" data-page="home">الرئيسية</a></li>
+      <li><a href="#biography" class="nav-link" data-page="biography">ترجمة الإمام</a></li>
+      <li><a href="#students" class="nav-link" data-page="students">تلاميذه</a></li>
+      <li><a href="#narrations" class="nav-link" data-page="narrations">المرويات</a></li>
+      <li><a href="#scholars" class="nav-link" data-page="scholars">عناية العلماء</a></li>
+      <li><a href="#about" class="nav-link" data-page="about">عن الموقع</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ===== SEARCH BAR ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="ابحث في محتوى الموقع..." />
+    <button id="searchClose">✕</button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+<button class="search-btn" id="searchBtn" title="بحث">🔍</button>
+
+<!-- ===== PAGES ===== -->
+<main id="main">
+
+  <!-- HOME PAGE -->
+  <section class="page active" id="page-home">
+    <div class="hero">
+      <div class="hero-bg">
+        <div class="geo-pattern"></div>
+        <div class="hero-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">وحدة علوم الحديث النبوي والحوسبة</div>
+        <h1 class="hero-title">
+          <span class="bismillah">بسم الله الرحمن الرحيم</span>
+          مرويات موطأ<br/>الإمام مالك
+        </h1>
+        <p class="hero-subtitle">أقدم المصنَّفات الحديثية الفقهية التي وصلتنا بأسانيد متصلة</p>
+        <div class="hero-quote">
+          <span class="quote-mark">"</span>
+          ما على ظهر الأرض كتاب بعد كتاب الله أصحّ من كتاب مالك
+          <span class="quote-author">— الإمام الشافعي</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="navigateTo('biography')">ابدأ القراءة</button>
+          <button class="btn-outline" onclick="navigateTo('narrations')">المرويات</button>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">↓</div>
+    </div>
+
+    <div class="cards-section">
+      <div class="section-header">
+        <div class="section-ornament">❧</div>
+        <h2>أقسام الموقع</h2>
+        <p>استعرض محتويات الموقع العلمي</p>
+      </div>
+      <div class="cards-grid">
+        <div class="card" onclick="navigateTo('biography')">
+          <div class="card-icon">📖</div>
+          <h3>ترجمة الإمام مالك</h3>
+          <p>نسبه، ولادته، نشأته، طلبه للعلم، وفاته ومكانته العلمية</p>
+          <span class="card-arrow">←</span>
+        </div>
+        <div class="card" onclick="navigateTo('students')">
+          <div class="card-icon">🎓</div>
+          <h3>تلاميذ الإمام</h3>
+          <p>أبرز من أخذ عنه العلم من المحدثين والفقهاء في شتى البلدان</p>
+          <span class="card-arrow">←</span>
+        </div>
+        <div class="card featured" onclick="navigateTo('narrations')">
+          <div class="card-icon">📜</div>
+          <h3>مرويات الموطأ</h3>
+          <p>الروايات المشهورة وخصائصها وتوزعها الجغرافي في العالم الإسلامي</p>
+          <span class="card-arrow">←</span>
+        </div>
+        <div class="card" onclick="navigateTo('scholars')">
+          <div class="card-icon">🏛</div>
+          <h3>عناية العلماء بالموطأ</h3>
+          <p>أكثر من مئة وثلاثين عالماً شرحوا الموطأ أو صنّفوا فيه</p>
+          <span class="card-arrow">←</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats-section">
+      <div class="stat"><span class="stat-num" data-target="1726">0</span><span class="stat-label">حديث في رواية الليثي</span></div>
+      <div class="stat"><span class="stat-num" data-target="1891">0</span><span class="stat-label">حديث في رواية أبي مصعب</span></div>
+      <div class="stat"><span class="stat-num" data-target="136">0</span><span class="stat-label">شارح ومصنِّف</span></div>
+      <div class="stat"><span class="stat-num" data-target="26">0</span><span class="stat-label">رواية معروفة</span></div>
+    </div>
+  </section>
+
+  <!-- BIOGRAPHY PAGE -->
+  <section class="page" id="page-biography">
+    <div class="page-hero bio-hero">
+      <div class="page-hero-content">
+        <div class="page-badge">القسم الأول</div>
+        <h1>ترجمة الإمام مالك</h1>
+        <p>إمام دار الهجرة وأجل علمائها</p>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="toc">
+        <h4>فهرس القسم</h4>
+        <ul>
+          <li><a href="#bio-name">اسمه ونسبه</a></li>
+          <li><a href="#bio-birth">والدته ونشأته</a></li>
+          <li><a href="#bio-study">طلبه للعلم</a></li>
+          <li><a href="#bio-madhab">أصول مذهبه</a></li>
+          <li><a href="#bio-muwatta">عدد أحاديث الموطأ</a></li>
+          <li><a href="#bio-rank">مكانة الموطأ</a></li>
+          <li><a href="#bio-death">وفاته</a></li>
+        </ul>
+      </div>
+      <div class="content-body">
+
+        <article class="content-section" id="bio-name">
+          <h2>اسمه ونسبه</h2>
+          <div class="highlight-box gold">
+            هو أبو عبد الله مالك بن أنس بن مالك الأصبحي، إمام دار الهجرة وأجل علمائها، وُلد بالمدينة المنورة عام <strong>93هـ</strong>، وتوفي بها عام <strong>179هـ</strong>.
+          </div>
+          <p>وكان أبوه رضي الله عنه راوية للحديث. ينتسب إلى قبيلة الأصبح اليمنية، وهي من القبائل التي استقرت بالمدينة المنورة منذ الفتح الإسلامي، فنشأ في بيت علم وحديث.</p>
+        </article>
+
+        <article class="content-section" id="bio-birth">
+          <h2>والدته ونشأته</h2>
+          <p>وُلد الإمام مالك بالمدينة المنورة، فرأى آثار الصحابة والتابعين، ورأى آثار النبي ﷺ والمشاهد العظيمة، فكان لذلك أثر بالغ في فكره وفقهه وحياته. ونشأ في بيت اشتغل بعلم الحديث والآثار الواردة عن الصحابة والتابعين.</p>
+          <div class="story-block">
+            <div class="story-icon">💡</div>
+            <div class="story-content">
+              <p>لما ذكر لأمه أنه يريد أن يذهب فيكتب العلم، <strong>ألبسته أحسن الثياب وعممته</strong>، ثم قالت: «اذهب فاكتب الآن»، وكانت تقول: «اذهب إلى ربيعة فتعلم أدبه قبل علمه.»</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-section" id="bio-study">
+          <h2>طلبه للعلم</h2>
+          <p>حفظ الإمام مالك في صدر حياته القرآن الكريم، ثم اتجه إلى حفظ الحديث. كان لإلمام مالك عدد من الأساتذة والشيوخ، منهم:</p>
+          <div class="teachers-grid">
+            <div class="teacher-card">
+              <span class="teacher-num">01</span>
+              <span>مالك بن أبي عامر (جده)</span>
+            </div>
+            <div class="teacher-card">
+              <span class="teacher-num">02</span>
+              <span>ابن شهاب الزهري</span>
+            </div>
+            <div class="teacher-card">
+              <span class="teacher-num">03</span>
+              <span>ربيعة الرأي</span>
+            </div>
+            <div class="teacher-card">
+              <span class="teacher-num">04</span>
+              <span>عبد الرحمن بن القاسم</span>
+            </div>
+            <div class="teacher-card">
+              <span class="teacher-num">05</span>
+              <span>نافع مولى ابن عمر</span>
+            </div>
+            <div class="teacher-card">
+              <span class="teacher-num">06</span>
+              <span>أبو الزناد</span>
+            </div>
+          </div>
+          <div class="quote-box">
+            <p>قال ابن القاسم: «أفضى بمالك طلبُ العلم إلى أن نقض سقف بيته، فباع خشبه، ثم مالت عليه الدنيا من بعد.»</p>
+          </div>
+        </article>
+
+        <article class="content-section" id="bio-madhab">
+          <h2>أصول مذهب الإمام مالك وانتشاره</h2>
+          <p>انشغل الإمام مالك بجمع حديث النبي ﷺ وسنته، وقد ساعده على ذلك إقامته في المدينة المنورة من بيت النبوة وأصحاب النبي وتابعيهم.</p>
+          <div class="principles-grid">
+            <div class="principle">
+              <div class="principle-num">١</div>
+              <div class="principle-text">كتاب الله عز وجل</div>
+            </div>
+            <div class="principle">
+              <div class="principle-num">٢</div>
+              <div class="principle-text">سنة نبيه ﷺ</div>
+            </div>
+            <div class="principle">
+              <div class="principle-num">٣</div>
+              <div class="principle-text">الإجماع والقياس</div>
+            </div>
+            <div class="principle">
+              <div class="principle-num">٤</div>
+              <div class="principle-text">عمل أهل المدينة</div>
+            </div>
+            <div class="principle">
+              <div class="principle-num">٥</div>
+              <div class="principle-text">المصالح المرسلة</div>
+            </div>
+            <div class="principle">
+              <div class="principle-num">٦</div>
+              <div class="principle-text">سد الذرائع والاستصحاب</div>
+            </div>
+          </div>
+          <p>وقد انتشر مذهبه في أنحاء العالم الإسلامي، وبخاصة في <strong>شمال أفريقيا</strong> (مصر والسودان والمغرب والجزائر وموريتانيا والأندلس)، وكذلك في الجزيرة العربية.</p>
+        </article>
+
+        <article class="content-section" id="bio-muwatta">
+          <h2>عدد أحاديث الموطأ</h2>
+          <p>كان الموطأ يضم في بداية الأمر قدراً مهماً من الأحاديث؛ اختلفت الروايات في تحديدها:</p>
+          <div class="hadith-stats">
+            <div class="hadith-stat">
+              <div class="hadith-num">10,000</div>
+              <div class="hadith-source">رواية عتيق الزبيري</div>
+            </div>
+            <div class="hadith-stat">
+              <div class="hadith-num">4,000</div>
+              <div class="hadith-source">رواية رابعة</div>
+            </div>
+            <div class="hadith-stat">
+              <div class="hadith-num">1,720</div>
+              <div class="hadith-source">رواية الأبهري</div>
+            </div>
+            <div class="hadith-stat">
+              <div class="hadith-num">663</div>
+              <div class="hadith-source">رواية الغافقي</div>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <p>قال الزرقاني نقلاً عن أبي بكر الأبهري: جملة ما في الموطأ <strong>ألف وسبعمائة وعشرون حديثاً</strong>، المسند منها ستمائة، والمرسل مائتان واثنان وعشرون، والموقوف ستمائة وثلاثة عشر، ومن قول التابعين مائتان وخمس وثمانون.</p>
+          </div>
+          <div class="sections-list">
+            <h4>أقسام الموطأ:</h4>
+            <div class="section-items">
+              <span class="section-item">أحاديث متصلة</span>
+              <span class="section-item">أحاديث مرسلة</span>
+              <span class="section-item">أحاديث منقطعة</span>
+              <span class="section-item">أحاديث موقوفة</span>
+              <span class="section-item">بلاغات</span>
+              <span class="section-item">أقوال الصحابة والتابعين</span>
+              <span class="section-item">أحكام مستنبطة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-section" id="bio-rank">
+          <h2>مكانة الموطأ بين كتب الحديث</h2>
+          <p>يرى جمهور المحدثين أن الموطأ دون رتبة الصحيحين، ونقل الحافظ ابن حجر أن كتاب مالك صحيح عنده وعند من يقلده على ما اقتضاه نظره من الاحتجاج بالمرسل والمنقطع وغيرها.</p>
+          <div class="scholars-opinions">
+            <div class="opinion">
+              <div class="opinion-author">الإمام الشافعي</div>
+              <div class="opinion-text">«ما على ظهر الأرض كتاب بعد كتاب الله أصح من كتاب مالك»</div>
+            </div>
+            <div class="opinion">
+              <div class="opinion-author">ابن العربي المالكي</div>
+              <div class="opinion-text">«الموطأ هو الأصل الأول واللباب»</div>
+            </div>
+            <div class="opinion">
+              <div class="opinion-author">الحافظ الذهبي</div>
+              <div class="opinion-text">رتبة الموطأ أن يُذكر تلو الصحيحين</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-section" id="bio-death">
+          <h2>وفاته رضي الله عنه</h2>
+          <div class="highlight-box gold">
+            توفي الإمام مالك رحمه الله وعمره <strong>92 سنة</strong>، قضاها في العلم والتعليم، ودُفن في مقبرة البقيع بالمدينة المنورة.
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- STUDENTS PAGE -->
+  <section class="page" id="page-students">
+    <div class="page-hero students-hero">
+      <div class="page-hero-content">
+        <div class="page-badge">القسم الثاني</div>
+        <h1>تلاميذ الإمام مالك</h1>
+        <p>الذين نقلوا فقه دار الهجرة إلى الآفاق</p>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-body full-width">
+        <p class="lead">انتشر تلاميذ الإمام مالك في الآفاق، ونقلوا فقه «دار الهجرة» إلى مختلف البلدان الإسلامية، وأسهموا في تدوين المذهب ونشره.</p>
+
+        <div class="countries-tabs">
+          <button class="tab-btn active" data-tab="egypt">مصر</button>
+          <button class="tab-btn" data-tab="andalus">الأندلس والمغرب</button>
+          <button class="tab-btn" data-tab="africa">إفريقية</button>
+          <button class="tab-btn" data-tab="hijaz">الحجاز</button>
+          <button class="tab-btn" data-tab="iraq">العراق</button>
+          <button class="tab-btn" data-tab="other">آخرون</button>
+        </div>
+
+        <div class="tab-content active" id="tab-egypt">
+          <div class="students-grid">
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الرحمن بن القاسم</h4>
+              <p>صحبه عشرين سنة، صاحب كتاب «المدونة»، وأثبت الناس في مالك</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الله بن وهب</h4>
+              <p>الفقيه، صحب مالكاً عشرين سنة، اهتم به الإمام مالك اهتماماً خاصاً</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>أشهب بن عبد العزيز</h4>
+              <p>صاحب «مدونة أشهب»</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الله بن عبد الحكم</h4>
+              <p>أعلم أصحابه بمختلف قوله</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>يحيى بن بكير</h4>
+              <p>اشتهر بكثرة سماعه من مالك، اعتمد عليه البخاري في صحيحه</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-andalus">
+          <div class="students-grid">
+            <div class="student-card featured">
+              <div class="student-rank">🌟</div>
+              <h4>يحيى بن يحيى الليثي</h4>
+              <p>راوية «الموطأ» الشهير، أدخل المذهب المالكي إلى الأندلس</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الملك بن حبيب الأندلسي</h4>
+              <p>من كبار فقهاء الأندلس</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>زياد بن عبد الرحمن</h4>
+              <p>أول من أدخل موطأ مالك إلى الأندلس</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-africa">
+          <div class="students-grid">
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>أسد بن الفرات</h4>
+              <p>صاحب «الأسدية»</p>
+            </div>
+            <div class="student-card featured">
+              <div class="student-rank">🌟</div>
+              <h4>سحنون بن سعيد التنوخي</h4>
+              <p>تلميذ ابن القاسم، نشر المذهب بـ«المدونة»</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>ابن أبي زيد القيرواني</h4>
+              <p>من كبار فقهاء المغرب</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-hijaz">
+          <div class="students-grid">
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد العزيز بن عبد الله الماجشون</h4>
+              <p>مفتي أهل المدينة</p>
+            </div>
+            <div class="student-card featured">
+              <div class="student-rank">🌟</div>
+              <h4>أبو مصعب أحمد بن القاسم</h4>
+              <p>راوي الموطأ، وروايته من أوسعها وأكثرها أحاديث</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>فاطمة بنت الإمام مالك</h4>
+              <p>كانت حافظة ومحدثة، من رواة الحديث عن أبيها</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-iraq">
+          <div class="students-grid">
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الرحمن بن مهدي</h4>
+              <p>من كبار الحفاظ</p>
+            </div>
+            <div class="student-card featured">
+              <div class="student-rank">🌟</div>
+              <h4>محمد بن الحسن الشيباني</h4>
+              <p>تلميذ أبي حنيفة، روى الموطأ وأضاف إليه تعليقاته الفقهية الحنفية</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الله بن مسلمة القعنبي</h4>
+              <p>وصفه البخاري بأنه «أصح الناس كتاباً عن مالك»</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>يحيى بن يحيى النيسابوري</h4>
+              <p>من رواة الموطأ في خراسان</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-other">
+          <div class="students-grid">
+            <div class="student-card featured">
+              <div class="student-rank">🌟</div>
+              <h4>الإمام الشافعي</h4>
+              <p>أعظم تلاميذ الإمام مالك، روى عنه الموطأ وتفقه على يديه ثم أسس مذهبه الفقهي</p>
+            </div>
+            <div class="student-card">
+              <div class="student-rank">⭐</div>
+              <h4>عبد الله بن المبارك</h4>
+              <p>من كبار الحفاظ والمجاهدين</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NARRATIONS PAGE -->
+  <section class="page" id="page-narrations">
+    <div class="page-hero narrations-hero">
+      <div class="page-hero-content">
+        <div class="page-badge">القسم الثالث</div>
+        <h1>مرويات الموطأ</h1>
+        <p>تعدد الروايات وأسبابها وخصائصها</p>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="toc">
+        <h4>فهرس القسم</h4>
+        <ul>
+          <li><a href="#narr-intro">مقدمة</a></li>
+          <li><a href="#narr-leythi">رواية يحيى الليثي</a></li>
+          <li><a href="#narr-shaybani">رواية الشيباني</a></li>
+          <li><a href="#narr-abumosaab">رواية أبي مصعب</a></li>
+          <li><a href="#narr-qanabi">رواية القعنبي</a></li>
+          <li><a href="#narr-others">روايات أخرى</a></li>
+          <li><a href="#narr-geo">التوزع الجغرافي</a></li>
+        </ul>
+      </div>
+      <div class="content-body">
+
+        <article class="content-section" id="narr-intro">
+          <h2>مقدمة في مرويات الموطأ</h2>
+          <p>يُعدّ «الموطأ» للإمام مالك أولَ كتاب صُنِّف في الحديث الصحيح والفقه معاً. ونظراً لمكانة الكتاب وكثرة تلاميذ الإمام مالك الذين رحلوا إليه من شتى بقاع الأرض، فقد تعددت روايات الموطأ. فرغم أن الأصل واحد، إلا أن الروايات تختلف من حيث:</p>
+          <div class="diff-boxes">
+            <div class="diff-box">الزيادة والنقصان في الأحاديث</div>
+            <div class="diff-box">ترتيب الأبواب والكتب</div>
+            <div class="diff-box">عدد الأحاديث المسندة والمرسلة</div>
+          </div>
+        </article>
+
+        <article class="content-section" id="narr-leythi">
+          <h2><span class="narr-badge popular">الأشهر</span> رواية يحيى بن يحيى الليثي</h2>
+          <div class="narr-info">
+            <div class="narr-detail"><span class="narr-label">الراوي:</span> يحيى بن يحيى بن كثير الليثي الأندلسي (ت. 234هـ)</div>
+            <div class="narr-detail"><span class="narr-label">البلد:</span> الأندلس</div>
+            <div class="narr-detail"><span class="narr-label">عدد الأحاديث:</span> نحو 1726 حديثاً</div>
+          </div>
+          <p>يُطلق عليها عند الإطلاق اسم «الموطأ»، وهي الرواية «المعتمدة» التي عرض على الإمام مالك في سنة وفاته. امتازت بضبط النص، وعليها شرح أغلب العلماء مثل «التمهيد» و«الاستذكار» لابن عبد البر.</p>
+          <div class="highlight-box gold">
+            <strong>المرجع المطبوع الأشهر:</strong> تحقيق محمد فؤاد عبد الباقي، دار إحياء التراث العربي، بيروت.
+          </div>
+        </article>
+
+        <article class="content-section" id="narr-shaybani">
+          <h2>رواية محمد بن الحسن الشيباني</h2>
+          <div class="narr-info">
+            <div class="narr-detail"><span class="narr-label">الراوي:</span> محمد بن الحسن الشيباني (ت. 189هـ)</div>
+            <div class="narr-detail"><span class="narr-label">البلد:</span> العراق (الكوفة / بغداد)</div>
+          </div>
+          <p>تلميذ الإمام أبي حنيفة وصاحبه. تتضمن هذه الرواية تعليقات فقهية من منظور المدرسة الحنفية، حيث يذكر محمد بن الحسن الحديث ثم يُبيّن رأي أهل الكوفة فيه (أبو حنيفة وأصحابه) وما اتفقوا فيه مع مالك أو اختلفوا.</p>
+          <div class="highlight-box">
+            <strong>القيمة العلمية:</strong> وثيقة فريدة تجسّد الحوار الفقهي بين مدرستي المدينة والكوفة في القرن الثاني الهجري.
+          </div>
+        </article>
+
+        <article class="content-section" id="narr-abumosaab">
+          <h2>رواية أبي مصعب الزهري</h2>
+          <div class="narr-info">
+            <div class="narr-detail"><span class="narr-label">الراوي:</span> أحمد بن أبي بكر الزهري (ت. 242هـ)</div>
+            <div class="narr-detail"><span class="narr-label">البلد:</span> المدينة المنورة</div>
+            <div class="narr-detail"><span class="narr-label">عدد الأحاديث:</span> نحو 1891 حديثاً</div>
+          </div>
+          <p>وهو من أواخر من روى عن مالك. تُعدّ «أكثر الروايات» أحاديث، وتُعتبر مرجعاً مهماً للمقارنة بين نصوص الموطأ، إذ تحتوي على زيادات وأحاديث ليست في رواية الليثي.</p>
+          <div class="highlight-box gold">
+            <strong>التحقيق:</strong> الدكتور بشار عواد معروف والدكتور محمود محمد خليل، مؤسسة الرسالة، بيروت، 1412هـ.
+          </div>
+        </article>
+
+        <article class="content-section" id="narr-qanabi">
+          <h2><span class="narr-badge accurate">الأتقن إسناداً</span> رواية القعنبي</h2>
+          <div class="narr-info">
+            <div class="narr-detail"><span class="narr-label">الراوي:</span> عبد الله بن مسلمة القعنبي (ت. 221هـ)</div>
+            <div class="narr-detail"><span class="narr-label">البلد:</span> البصرة / المدينة</div>
+          </div>
+          <div class="highlight-box gold">
+            وصفها البخاري بقوله: «أصح الناس كتاباً عن مالك وأتقنهم»
+          </div>
+          <p>اعتمد عليها أصحاب الكتب الستة كثيراً. وصف العلماء هذه الرواية بأنها من أجود الروايات ضبطاً وإتقاناً.</p>
+        </article>
+
+        <article class="content-section" id="narr-others">
+          <h2>روايات أخرى شهيرة</h2>
+          <div class="other-narrations">
+            <div class="other-narr">
+              <h4>رواية ابن القاسم</h4>
+              <p>عبد الرحمن بن القاسم، تلميذ مالك المقرب وصاحب «المدونة»، مهمة جداً للمدرسة المصرية المالكية.</p>
+            </div>
+            <div class="other-narr">
+              <h4>رواية سويد بن سعيد الحدثاني</h4>
+              <p>تمتاز بكثرة الأحاديث المرفوعة فيها.</p>
+            </div>
+            <div class="other-narr">
+              <h4>رواية يحيى بن بكير</h4>
+              <p>اشتهرت بزياداتها في أخبار وأحاديث معينة.</p>
+            </div>
+            <div class="other-narr">
+              <h4>رواية يحيى التميمي</h4>
+              <p>نقل فقه مالك للقيروان (المغرب العربي / إفريقية).</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-section" id="narr-geo">
+          <h2>مرويات الموطأ حسب البلدان</h2>
+          <p>تُعدّ مرويات الموطأ مرآةً لرحلات طلب العلم في القرن الثاني الهجري، حيث توافد طلاب العلم من كل أقطار العالم الإسلامي إلى المدينة المنورة للسماع من «إمام دار الهجرة».</p>
+
+          <div class="geo-grid">
+            <div class="geo-card">
+              <div class="geo-flag">🌍</div>
+              <h4>الأندلس والمغرب</h4>
+              <p>رواية يحيى الليثي — هي الأشهر والأوسع انتشاراً. بها انتشر المذهب المالكي في العالم الإسلامي الغربي.</p>
+            </div>
+            <div class="geo-card">
+              <div class="geo-flag">🏛</div>
+              <h4>العراق (الكوفة وبغداد)</h4>
+              <p>رواية الشيباني (الأشهر في العراق) + رواية القعنبي. تميزت بصبغة فقهية مقارنة.</p>
+            </div>
+            <div class="geo-card">
+              <div class="geo-flag">🌅</div>
+              <h4>مصر</h4>
+              <p>رواية ابن وهب + رواية ابن القاسم + رواية يحيى بن بكير. أول محطة لانتشار علم مالك قبل المغرب.</p>
+            </div>
+            <div class="geo-card">
+              <div class="geo-flag">🕌</div>
+              <h4>الحجاز والمدينة</h4>
+              <p>رواية أبي مصعب الزهري (الأوسع) + رواية مطرف + رواية معن بن عيسى. تمتاز بالزيادات المتأخرة.</p>
+            </div>
+            <div class="geo-card">
+              <div class="geo-flag">🏔</div>
+              <h4>الشام</h4>
+              <p>رواية الوليد بن مسلم (دمشق). رواها ونشرها قبل سيادة المذهب الأوزاعي ثم الشافعي.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SCHOLARS PAGE -->
+  <section class="page" id="page-scholars">
+    <div class="page-hero scholars-hero">
+      <div class="page-hero-content">
+        <div class="page-badge">القسم الرابع</div>
+        <h1>عناية العلماء بالموطأ</h1>
+        <p>من القرن الثالث إلى القرن الخامس عشر الهجري</p>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-body full-width">
+        <div class="highlight-box gold">
+          لقد حظي موطأ الإمام مالك بالعناية من كل جوانبه العلمية، منذ القرن الثالث إلى القرن الخامس عشر الهجري. وقد سارع إلى شرحه غير المالكية أصحاب المذاهب الأخرى: الشافعية والأحناف.
+        </div>
+
+        <div class="scholars-search-bar">
+          <input type="text" id="scholarsSearch" placeholder="🔍 ابحث في أسماء العلماء..." oninput="filterScholars()" />
+        </div>
+
+        <div class="scholars-counter">
+          <span id="scholarsCount">136</span> عالم اعتنى بالموطأ شرحاً وتصنيفاً
+        </div>
+
+        <div class="scholars-list" id="scholarsList">
+          <div class="scholar-item" data-name="أحمد بن عمران الأخفش"><span class="scholar-num">1</span><div class="scholar-info"><strong>أحمد بن عمران بن سلامة الأخفش</strong> — القرن الثالث الهجري<br/><em>له تفسير غريب الموطأ</em></div></div>
+          <div class="scholar-item" data-name="أحمد بن نصر الداودي"><span class="scholar-num">2</span><div class="scholar-info"><strong>أحمد بن نصر الداودي (ت.402هـ)</strong><br/><em>له كتاب النامي في شرح الموطأ</em></div></div>
+          <div class="scholar-item" data-name="ابن عبد البر"><span class="scholar-num">3</span><div class="scholar-info"><strong>يوسف بن عبد الله ابن عبد البر (ت.463هـ)</strong><br/><em>له «التمهيد» و«الاستذكار» و«تجريد التمهيد»</em></div></div>
+          <div class="scholar-item" data-name="ابن العربي المالكي"><span class="scholar-num">4</span><div class="scholar-info"><strong>أبو بكر ابن العربي المالكي</strong><br/><em>له «القبس على موطأ مالك بن أنس» و«ترتيب المسالك»</em></div></div>
+          <div class="scholar-item" data-name="أبو الوليد الباجي"><span class="scholar-num">5</span><div class="scholar-info"><strong>أبو الوليد سليمان الباجي</strong><br/><em>له ثلاثة شروح على الموطأ: الإيماء، والاستيفاء، والمنتقى (مطبوع)</em></div></div>
+          <div class="scholar-item" data-name="ابن حزم الظاهري"><span class="scholar-num">6</span><div class="scholar-info"><strong>ابن حزم الظاهري</strong><br/><em>له شرح الموطأ</em></div></div>
+          <div class="scholar-item" data-name="الزرقاني"><span class="scholar-num">7</span><div class="scholar-info"><strong>محمد بن عبد الباقي الزرقاني (ت.1122هـ)</strong><br/><em>له شرح الزرقاني على موطأ الإمام مالك — أربعة مجلدات مطبوعة متداولة</em></div></div>
+          <div class="scholar-item" data-name="السيوطي"><span class="scholar-num">8</span><div class="scholar-info"><strong>عبد الرحمن السيوطي</strong><br/><em>له «تنوير الحوالك» (مطبوع)، و«إسعاف المبطا» (مطبوع)، وشرح كبير لم يُطبع</em></div></div>
+          <div class="scholar-item" data-name="ابن حجر العسقلاني"><span class="scholar-num">9</span><div class="scholar-info"><strong>أحمد بن علي ابن حجر العسقلاني</strong><br/><em>اعتنى بالموطأ ونقل منه في فتح الباري اعتناءً بالغاً</em></div></div>
+          <div class="scholar-item" data-name="محمد طاهر ابن عاشور"><span class="scholar-num">10</span><div class="scholar-info"><strong>محمد الطاهر بن عاشور</strong><br/><em>له «كشف المغطى من المعاني والألفاظ الواقعة في الموطأ» (طبع بتونس)</em></div></div>
+          <div class="scholar-item" data-name="الكاندهلوي"><span class="scholar-num">11</span><div class="scholar-info"><strong>محمد زكريا الكاندهلوي</strong><br/><em>له «أوجز السالك إلى موطأ مالك» (مطبوع)</em></div></div>
+          <div class="scholar-item" data-name="اللكنوي"><span class="scholar-num">12</span><div class="scholar-info"><strong>عبد الحي اللكنوي</strong><br/><em>له «التعليق الممجد» طبع بالهند وحُقق في مصر</em></div></div>
+          <div class="scholar-item" data-name="أبو الحسن الدارقطني"><span class="scholar-num">13</span><div class="scholar-info"><strong>أبو الحسن الدارقطني</strong><br/><em>له كتاب «اختلاف الموطآت»</em></div></div>
+          <div class="scholar-item" data-name="القاضي عياض"><span class="scholar-num">14</span><div class="scholar-info"><strong>القاضي عياض بن موسى اليحصبي</strong><br/><em>له «مشارق الأنوار» في تفسير غريب الموطأ والصحيحين</em></div></div>
+          <div class="scholar-item" data-name="ابن مفرح القاضي"><span class="scholar-num">15</span><div class="scholar-info"><strong>ابن مفرج القاضي</strong><br/><em>له كتاب في رجال الموطأ</em></div></div>
+          <div class="scholar-item" data-name="ابن الحذاء"><span class="scholar-num">16</span><div class="scholar-info"><strong>محمد بن يحيى ابن الحذاء (ت.416هـ)</strong><br/><em>له «التعريف بمن ذُكر في موطأ مالك من الرجال والنساء والأحكام» في ثمانية أجزاء</em></div></div>
+          <div class="scholar-item" data-name="ابن زرقون"><span class="scholar-num">17</span><div class="scholar-info"><strong>محمد بن أحمد ابن زرقون (ت.586هـ)</strong><br/><em>له «الأنوار في الجمع بين المنتقى والاستذكار»</em></div></div>
+          <div class="scholar-item" data-name="الشنقيطي"><span class="scholar-num">18</span><div class="scholar-info"><strong>محمد جيب الله الجكني الشنقيطي</strong><br/><em>له «دليل السالك إلى موطأ مالك» (مطبوع)</em></div></div>
+          <div class="scholar-item" data-name="أبو مصعب الزهري"><span class="scholar-num">19</span><div class="scholar-info"><strong>أبو محمد عبد الله بن مسلم ابن وهب (ت.197هـ)</strong><br/><em>له شرح الموطأ وكتاب في رجاله وغريبه</em></div></div>
+          <div class="scholar-item" data-name="ابن ماجشون"><span class="scholar-num">20</span><div class="scholar-info"><strong>أبو القاسم الجوهري</strong><br/><em>له «شواهد الموطأ» ومسند حديث مالك خارج الموطأ</em></div></div>
+        </div>
+
+        <div class="scholars-note">
+          <p>وقد أحصى العلماء ما يزيد على <strong>136 شارحاً ومصنِّفاً</strong> اعتنوا بالموطأ شرحاً وتعليقاً وتصنيفاً، من القرن الثالث الهجري حتى العصر الحديث.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PAGE -->
+  <section class="page" id="page-about">
+    <div class="page-hero about-hero">
+      <div class="page-hero-content">
+        <div class="page-badge">عن الموقع</div>
+        <h1>معلومات الموقع</h1>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="content-body full-width">
+        <div class="about-card">
+          <div class="about-logo">☽</div>
+          <h2>موقع مرويات موطأ الإمام مالك</h2>
+          <div class="about-details">
+            <div class="about-row">
+              <span class="about-label">الطالب الباحث:</span>
+              <span class="about-value">الريمش بدر</span>
+            </div>
+            <div class="about-row">
+              <span class="about-label">إشراف:</span>
+              <span class="about-value">الدكتور عبد الكريم الخلفي</span>
+            </div>
+            <div class="about-row">
+              <span class="about-label">الكلية:</span>
+              <span class="about-value">كلية الشريعة — أيت ملول</span>
+            </div>
+            <div class="about-row">
+              <span class="about-label">التخصص:</span>
+              <span class="about-value">ماستر الشريعة والابتكار الرقمي</span>
+            </div>
+            <div class="about-row">
+              <span class="about-label">الوحدة:</span>
+              <span class="about-value">علوم الحديث النبوي والحوسبة</span>
+            </div>
+            <div class="about-row">
+              <span class="about-label">الموسم الدراسي:</span>
+              <span class="about-value">1446 - 1447 هـ / 2025 - 2026 م</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-mission">
+          <h3>عن المشروع</h3>
+          <p>يهدف هذا الموقع إلى تقديم محتوى علمي متخصص في مرويات موطأ الإمام مالك بن أنس، بأسلوب رقمي حديث وتفاعلي، ضمن مشروع وحدة علوم الحديث النبوي والحوسبة في برنامج ماستر الشريعة والابتكار الرقمي بكلية الشريعة — أيت ملول.</p>
+          <p>يجمع الموقع بين عمق المحتوى العلمي الأصيل ومتطلبات العصر الرقمي في تيسير الوصول إلى التراث الحديثي وتقريبه للباحثين والمهتمين.</p>
+        </div>
+
+        <div class="about-sources">
+          <h3>المصادر الرئيسية</h3>
+          <ul class="sources-list">
+            <li>
+              <div class="source-info"><span class="source-icon">📚</span><span class="source-title">الموطأ — رواية يحيى بن يحيى الليثي، تحقيق: محمد فؤاد عبد الباقي</span></div>
+              <a href="https://shamela.ws/book/28107" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">📚</span><span class="source-title">الموطأ — رواية أبي مصعب الزهري، تحقيق: بشار عواد ومحمود محمد خليل</span></div>
+              <a href="https://shamela.ws/book/8140" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">📖</span><span class="source-title">التمهيد لما في الموطأ من المعاني والأسانيد — ابن عبد البر القرطبي</span></div>
+              <a href="https://shamela.ws/book/1719" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">📖</span><span class="source-title">ترتيب المدارك وتقريب المسالك — القاضي عياض</span></div>
+              <a href="https://shamela.ws/book/31316" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">📖</span><span class="source-title">سير أعلام النبلاء — الحافظ الذهبي</span></div>
+              <a href="https://shamela.ws/book/10906" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">📖</span><span class="source-title">المدخل إلى دراسة المذاهب الفقهية</span></div>
+              <a href="https://shamela.ws/book/2771" target="_blank" rel="noopener" class="source-link"><span>قراءة في الشاملة</span><span class="link-arrow">↗</span></a>
+            </li>
+            <li>
+              <div class="source-info"><span class="source-icon">🌐</span><span class="source-title">موقع وزارة الأوقاف والشؤون الإسلامية — تاريخ المذهب المالكي</span></div>
+              <a href="https://www.habous.gov.ma/2012-01-26-16-13-00/1310-%D8%AA%D8%A7%D8%B1%D9%8A%D8%AE-%D8%A7%D9%84%D9%85%D8%B0%D9%87%D8%A8-%D8%A7%D9%84%D9%85%D8%A7%D9%84%D9%83%D9%8A.html" target="_blank" rel="noopener" class="source-link source-link-gov"><span>زيارة الموقع</span><span class="link-arrow">↗</span></a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- BACK TO TOP -->
+<button class="back-top" id="backTop" title="عودة للأعلى">↑</button>
+
+<!-- SHARE MODAL -->
+<div class="share-modal" id="shareModal">
+  <div class="share-content">
+    <h3>مشاركة الصفحة</h3>
+    <div class="share-btns">
+      <button onclick="copyLink()">📋 نسخ الرابط</button>
+      <button onclick="shareWhatsapp()">📱 واتساب</button>
+      <button onclick="shareTelegram()">✈️ تيليغرام</button>
+    </div>
+    <button class="share-close" onclick="closeShare()">إغلاق</button>
+  </div>
+</div>
+
+<button class="share-btn" id="shareBtn" title="مشاركة">↗</button>
+
+<script>
+/* =============================================
+   MUWATTA WEBSITE — INTERACTIVE JAVASCRIPT
+   ============================================= */
+
+// ===== NAVIGATION =====
+const navLinks = document.querySelectorAll('.nav-link');
+const pages = document.querySelectorAll('.page');
+const navToggle = document.getElementById('navToggle');
+const navLinksEl = document.getElementById('navLinks');
+
+function navigateTo(pageId) {
+  pages.forEach(p => p.classList.remove('active'));
+  navLinks.forEach(l => l.classList.remove('active'));
+
+  const targetPage = document.getElementById('page-' + pageId);
+  const targetLink = document.querySelector(`[data-page="${pageId}"]`);
+
+  if (targetPage) {
+    targetPage.classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+  if (targetLink) targetLink.classList.add('active');
+
+  // Close mobile nav
+  navLinksEl.classList.remove('open');
+
+  // Trigger animations
+  setTimeout(() => animateStats(), 100);
+}
+
+navLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    const pageId = link.getAttribute('data-page');
+    navigateTo(pageId);
+  });
+});
+
+document.querySelector('.nav-brand').addEventListener('click', () => navigateTo('home'));
+
+navToggle.addEventListener('click', () => {
+  navLinksEl.classList.toggle('open');
+});
+
+// Close nav on outside click
+document.addEventListener('click', (e) => {
+  if (!e.target.closest('.navbar')) {
+    navLinksEl.classList.remove('open');
+  }
+});
+
+// ===== SMOOTH ANCHOR SCROLL =====
+document.addEventListener('click', (e) => {
+  const tocLink = e.target.closest('.toc a');
+  if (tocLink) {
+    e.preventDefault();
+    const id = tocLink.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 90;
+      const top = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  }
+});
+
+// ===== STATS COUNTER =====
+function animateStats() {
+  const stats = document.querySelectorAll('.stat-num[data-target]');
+  stats.forEach(stat => {
+    const target = +stat.getAttribute('data-target');
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    stat.textContent = '0';
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      stat.textContent = Math.floor(current).toLocaleString('ar-EG');
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  });
+}
+
+// Run on load for home page
+setTimeout(() => animateStats(), 400);
+
+// ===== TABS (students page) =====
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = document.querySelectorAll('.tab-content');
+
+tabBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.getAttribute('data-tab');
+    tabBtns.forEach(b => b.classList.remove('active'));
+    tabContents.forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    const targetEl = document.getElementById('tab-' + target);
+    if (targetEl) targetEl.classList.add('active');
+  });
+});
+
+// ===== SCHOLARS SEARCH =====
+function filterScholars() {
+  const q = document.getElementById('scholarsSearch').value.trim().toLowerCase();
+  const items = document.querySelectorAll('.scholar-item');
+  let visible = 0;
+  items.forEach(item => {
+    const name = item.getAttribute('data-name').toLowerCase();
+    const text = item.textContent.toLowerCase();
+    if (!q || name.includes(q) || text.includes(q)) {
+      item.style.display = '';
+      visible++;
+    } else {
+      item.style.display = 'none';
+    }
+  });
+  const counter = document.getElementById('scholarsCount');
+  if (counter) counter.textContent = visible;
+}
+
+// ===== GLOBAL SEARCH =====
+const searchBtn = document.getElementById('searchBtn');
+const searchOverlay = document.getElementById('searchOverlay');
+const searchClose = document.getElementById('searchClose');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+const searchIndex = [
+  { page: 'biography', title: 'اسم الإمام مالك ونسبه', text: 'أبو عبد الله مالك بن أنس الأصبحي إمام دار الهجرة' },
+  { page: 'biography', title: 'ولادة الإمام مالك', text: 'وُلد عام 93هـ بالمدينة المنورة وتوفي 179هـ' },
+  { page: 'biography', title: 'أصول مذهب الإمام مالك', text: 'القياس عمل أهل المدينة المصالح المرسلة سد الذرائع' },
+  { page: 'biography', title: 'عدد أحاديث الموطأ', text: 'ألف وسبعمائة وعشرون حديثاً مسند مرسل موقوف' },
+  { page: 'students', title: 'يحيى بن يحيى الليثي', text: 'راوية الموطأ الشهير أدخل المذهب المالكي الأندلس' },
+  { page: 'students', title: 'عبد الرحمن بن القاسم', text: 'صاحب المدونة أثبت الناس في مالك' },
+  { page: 'students', title: 'محمد بن الحسن الشيباني', text: 'تلميذ أبي حنيفة روى الموطأ تعليقات حنفية' },
+  { page: 'students', title: 'الإمام الشافعي', text: 'أعظم تلاميذ الإمام مالك أسس مذهبه' },
+  { page: 'narrations', title: 'رواية يحيى الليثي الأشهر', text: 'الرواية المعتمدة ألف وسبعمائة وست وعشرون حديثاً' },
+  { page: 'narrations', title: 'رواية محمد بن الحسن الشيباني', text: 'تعليقات فقهية حنفية مقارنة العراق الكوفة' },
+  { page: 'narrations', title: 'رواية أبي مصعب الزهري', text: 'أكثر الروايات أحاديثاً ألف وثمانمائة وواحد وتسعون' },
+  { page: 'narrations', title: 'رواية القعنبي الأتقن', text: 'أصح الناس كتاباً عن مالك قاله البخاري' },
+  { page: 'narrations', title: 'المرويات حسب البلدان', text: 'الأندلس مصر العراق المدينة الشام' },
+  { page: 'scholars', title: 'ابن عبد البر', text: 'التمهيد الاستذكار أوسع شروح الموطأ' },
+  { page: 'scholars', title: 'الزرقاني', text: 'شرح الزرقاني على موطأ الإمام مالك أربعة مجلدات' },
+  { page: 'scholars', title: 'ابن العربي المالكي', text: 'القبس في شرح موطأ مالك ترتيب المسالك' },
+  { page: 'scholars', title: 'أبو الوليد الباجي', text: 'المنتقى شرح الموطأ ثلاثة شروح' },
+  { page: 'scholars', title: 'السيوطي', text: 'تنوير الحوالك إسعاف المبطا' },
+];
+
+searchBtn.addEventListener('click', () => {
+  searchOverlay.classList.add('open');
+  setTimeout(() => searchInput.focus(), 100);
+});
+
+searchClose.addEventListener('click', () => {
+  searchOverlay.classList.remove('open');
+  searchInput.value = '';
+  searchResults.innerHTML = '';
+});
+
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.trim().toLowerCase();
+  if (!q) { searchResults.innerHTML = ''; return; }
+
+  const results = searchIndex.filter(item =>
+    item.title.toLowerCase().includes(q) || item.text.toLowerCase().includes(q)
+  );
+
+  if (!results.length) {
+    searchResults.innerHTML = '<div class="search-result-item"><p>لا نتائج مطابقة</p></div>';
+    return;
+  }
+
+  searchResults.innerHTML = results.map(r => `
+    <div class="search-result-item" onclick="navigateTo('${r.page}');searchOverlay.classList.remove('open');searchInput.value='';searchResults.innerHTML='';">
+      <h4>${r.title}</h4>
+      <p>${r.text}</p>
+    </div>
+  `).join('');
+});
+
+// Close search on Escape
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    searchOverlay.classList.remove('open');
+    shareModal.classList.remove('open');
+  }
+});
+
+// ===== BACK TO TOP =====
+const backTop = document.getElementById('backTop');
+
+window.addEventListener('scroll', () => {
+  backTop.classList.toggle('visible', window.scrollY > 400);
+});
+
+backTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== SHARE =====
+const shareBtn = document.getElementById('shareBtn');
+const shareModal = document.getElementById('shareModal');
+
+shareBtn.addEventListener('click', () => {
+  shareModal.classList.toggle('open');
+});
+
+function closeShare() {
+  shareModal.classList.remove('open');
+}
+
+function copyLink() {
+  const url = window.location.href;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(() => {
+      alert('تم نسخ الرابط!');
+    });
+  } else {
+    alert(url);
+  }
+  closeShare();
+}
+
+function shareWhatsapp() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('موقع مرويات موطأ الإمام مالك — مشروع علمي تفاعلي');
+  window.open(`https://wa.me/?text=${text}%20${url}`, '_blank');
+  closeShare();
+}
+
+function shareTelegram() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('موقع مرويات موطأ الإمام مالك');
+  window.open(`https://t.me/share/url?url=${url}&text=${text}`, '_blank');
+  closeShare();
+}
+
+// ===== NAVBAR SCROLL EFFECT =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.style.boxShadow = window.scrollY > 20 ? '0 4px 20px rgba(0,0,0,.25)' : 'none';
+});
+
+// ===== CARD CLICK NAVIGATION (home page) =====
+// Already handled inline with onclick attributes
+
+// ===== SCROLL INDICATOR (navbar active link) =====
+// Track scroll position and highlight TOC items
+document.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.content-section[id]');
+  const scrollY = window.scrollY + 120;
+  sections.forEach(section => {
+    const top = section.offsetTop;
+    const bottom = top + section.offsetHeight;
+    if (scrollY >= top && scrollY < bottom) {
+      document.querySelectorAll('.toc a').forEach(a => {
+        a.style.fontWeight = a.getAttribute('href') === '#' + section.id ? '700' : '400';
+        a.style.color = a.getAttribute('href') === '#' + section.id ? 'var(--green-deep)' : '';
+      });
+    }
+  });
+}, { passive: true });
+
+// ===== INITIAL LOAD =====
+window.addEventListener('DOMContentLoaded', () => {
+  navigateTo('home');
+  console.log('🌙 موقع مرويات موطأ الإمام مالك — جاهز');
+});
+
+</script>
+</body>
+</html>
